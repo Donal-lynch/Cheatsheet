@@ -1,0 +1,88 @@
+---
+title: "My Cheatsheet"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+options(width = 120)
+```
+
+## Cheat sheet for bash commands
+Directory notation
+
+|Symbol|Meaning         | 
+|:-----|:---------------|
+|~     |Home            | 
+|/     |Top of the tree |
+
+
+Command line enteries
+
+|Command            |-flags  |Arguments             |Details    | 
+|:-----------------:|:------:|:---------------------|:----------| 
+|pwd                |        |                      |Print working directory
+|clear              |        |                      |                                        
+|ls                 |        |                      |List files and dirs in currrent dir
+|                   |\-a     |                      |All (including hidden)
+|                   |\-l     |                      |Adds details of each item
+|cd                 |        |                      |Change directory, no arguments takes you home
+|                   |..      |                      |Move up one dir
+|                   |        |destination directory |
+|mkdir              |        |New directory name    |
+|touch              |        |File name             |Create a new file
+|cp                 |        |file <br> destination directory        |Copy a file
+|                   |\-r     |directory <br> destination directory   |Recurssive \- copy a directory
+|rm                 |        |                                       |Delete a file \- **NO RECYLCE BIN**
+|                   |\-r     |                                       |Delete folder \- **NO RECYLCE BIN**
+|mv                 |        |file <br> destination directory        |Move a file
+|                   |\-r     |current filename <br> current filename |Rename a file
+|echo               |        |A string                               |Print a string
+|date               |        |                                       |Print the date
+|exit               |        |                                       |Close the window
+|git config         |--global|username              |Set username
+|                   |        |email                 |Set email
+|                   |--list  |                      |View username and email
+|git init           |        |                      |Initialise a local repository
+|git remote add origin|      |Repository URL        |point local repo at GitHub server repo
+|git clone          |        |Repository URL        |Clone a repository contents to your local folder
+|git add            |.       |                      |Adds all new files in cd to be tracked
+|                   |\-u     |                      |Updates index with file name changes or deleted files 
+|                   |\-A     |                      |Does both of above
+|git commit         |\-m     |Message               |Commits with message - Locally, not to GitHub
+|git push           |        |                      |
+|git checkout       |-b      |branchname            |Creates a branch with branchname
+|                   |        |master                |Switch back to master branch
+|git branch         |        |                      |Check what branch you are on
+
+
+
+### Git work flow
+#### New Repository
+* Create GitHub Repo
+* Create Folder and add files
+* git remote add origin REPO URL
+* git add -A
+* git commit -m
+* git push -u origin master
+
+#### Pushing
+* Add
+* Commit
+* Push
+
+#### Forking an existing repository
+1. Fork the repository on Github
+2. Copy the URL from the *NEW* repository  
+*Go to Gitbash*
+3. Clone using new repo URL
+4. git init
+5. git remote add origin [my github repo URL]
+6. git remote add upstream [original github repo url]
+7. Make a change to any file, otherwise push will fail
+8. git add, commit, push
+
+
+## Cheat sheets for Markdown
+https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables
